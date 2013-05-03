@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bookmarklet Lancenet</title>
+    <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <style>
+      * { -moz-box-sizing: border-box; box-sizing: border-box; }
+      body { font-family: Montserrat, 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; font-size: 14px; color: rgb(34, 34, 34); margin: 0px; background: url(./bg.png); }
+      h1 { font-family: 'Arvo', Georgia, Times, serif; font-size: 59px; line-height: 70px; margin-top: 20px; } 
+      p { font-family: 'PT Sans', Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px; width: 480px; margin: 0 auto; }
+      .wrapper { width: 640px; margin: 0 auto; text-align: center; }
+      .button-well { margin: 35px auto 0; text-align: center; display: block; }
+      .button-well .button { display: inline-block; padding: 22px 39px 20px; margin-bottom: 30px; font-family: Montserrat, sans-serif; font-weight: 400; font-size: 23px; line-height: 20px; color: rgb(255, 255, 255); text-align: left; text-shadow: rgba(0, 0, 0, 0.270588) 0px 1px 1px; vertical-align: middle; cursor: pointer; background-color: rgb(253, 191, 0); border: 1px solid rgb(246, 184, 0); border-image: initial; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-image: -webkit-linear-gradient(bottom, rgb(253, 191, 0), rgb(255, 214, 23)); text-decoration: none; margin-right: 5px; margin-left: 5px; box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 0px 0px inset, rgba(255, 255, 255, 0.2) 0px 0px 5px 0px inset, rgba(255, 255, 255, 0) 0px 67px 67px -40px inset, rgb(46, 46, 46) 0px 2px 0px 0px, rgba(0, 0, 0, 0.4) 0px 3px 6px 0px; -webkit-transition: box-shadow 230ms ease-in-out, -webkit-transform 230ms ease-in-out, border-color 230ms ease-in-out; }
+      .button-well .button.bookmarklet { padding-left: 64px; border: 1px solid #FCAF00; background-color: #FCAF00; background-image: url('./lancenet.png'); background-position: 22px 47%, 50% 50%; background-size: 26px auto, auto auto; background-repeat: no-repeat, no-repeat; box-shadow:  inset 0 1px 0 0 rgba(255,255,255,0.4), inset 0 0 5px 0 rgba(255,255,255,0.2), inset 0 67px 67px -40px rgba(255,255,255,0), 0 2px 0 0 #EB9E00, 0 3px 6px 0 rgba(0,0,0,0.4); }
+      .button-well .button.bookmarklet:hover { border-color: rgba(252.00, 175.00, 0.00, 0.5); box-shadow:  inset 0 1px 0 0 rgba(255,255,255,0.6), inset 0 0 5px 0 rgba(255,255,255,0.2), inset 0 67px 67px -40px rgba(255,255,255,0.3), 0 2px 0 0 #EB9E00, 0 3px 8px 0 rgba(0,0,0,0.4); }
+      .button-well .button.bookmarklet:active { box-shadow: inset 0 1px 0 0 rgba(255,255,255,0), inset 0 1px 7px -1px rgba(0,0,0,0.35), inset 0 67px 67px -40px rgba(255,255,255,0), 0 2px 0 0 rgba(79,111,168,0), 0 4px 7px 0 rgba(0,0,0,0); transform: translate(0px, 2px); }
+      .footer { color: #bbb; padding-top: 20px; }
+      .footer a, .footer a:hover, .footer a:visited, .footer a:active { color: #aaa; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>N&atilde;o gostou do novo Paywall do Lancenet?</h1>
+      <p>Arraste o bot&atilde;o abaixo para sua barra de favoritos e clique nele para sumir com a paywall.</p> 
+      <div class="button-well">
+        <a href="javascript:( function(){ var css='#pw-handler, #pw-overlay { display: none !important }'; if ('\v'=='v') { /* IE Only */ document.createStyleSheet().cssText = css; } else { /* Webkit only */ var tag = document.createElement('style'); tag.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(tag); tag[(typeof document.body.style.WebkitAppearance=='string') ? 'innerText' : 'innerHTML'] = css; } })();" class="button bookmarklet">Tchau Paywall</a>
+      </div>
+      <div class="footer">Criado por <a href="http://esampaio.com/">Eduardo Sampaio</a>. Siga-me no Twitter <a href="http://twitter.com/esampaio">aqui</a>.</div>
+    </div>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39466551-1']);
+      _gaq.push(['_setDomainName', 'github.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
